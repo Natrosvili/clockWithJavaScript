@@ -1,0 +1,124 @@
+:root {
+    --numFontSize: 27px;
+    --numColor: lightgoldenrodyellow;
+    --numWeight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: sienna;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+img {
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%);
+    z-index: 2;
+}
+
+#clock {
+    position:relative;
+    border: 5px solid grey;
+    border-radius: 50%;
+    background-color: lightgrey;
+    height: 400px;
+    width: 400px;
+    margin: 150px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,.7);
+}
+
+.numbers div {
+    position: absolute;
+    color: var(--numColor);
+    font-size: var(--numFontSize);
+    font-weight: var(--numWeight);  
+}
+
+.numbers .twelve {
+    left: 50%;
+    top: 6px;
+    transform: translate(-50%);
+}
+
+.numbers .three {
+    color: var(--numColor);
+    font-weight: var(--numWeight);
+    right: 1px;
+    top: 180px;
+    margin-right: 5px;
+}
+
+
+.numbers .six {
+    color: var(--numColor);
+    font-weight: var(--numWeight);
+    bottom: 1px;
+    left: 195px;
+}   
+
+.numbers .nine {
+    color: var(--numColor);
+    font-weight: var(--numWeight);
+    bottom: 180px;
+    margin-left: 5px;
+}
+
+.arrows {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-items: center;
+}
+
+.arrows::before {
+    position: absolute;
+    left: 188px;
+    content: "";
+    width: 30px;
+    background-color: green;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.arrows div {
+    background-color: white;
+    width: 5px;
+    position:absolute;
+    height: 150px;
+    left: 200px;
+    transform-origin: bottom center;
+    bottom: 50%;
+    border-radius: 50% 50% 0 0;
+}
+
+.arrows .hour {
+    z-index: 3;
+    height: 150px;
+    background-color: red;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(30deg);
+}
+
+.arrows .minute {
+    z-index: 3;
+    background-color: blue;
+    height: 190px;
+}
+
+.arrows .second {
+    z-index: 3;
+    transform: rotate(50deg);
+    height: 175px;
+    background-color: black;
+}
